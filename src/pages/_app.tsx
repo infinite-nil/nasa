@@ -1,5 +1,13 @@
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import { ThemeProvider } from "styled-components";
 
-export default MyApp;
+const theme = {};
+
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
+}
