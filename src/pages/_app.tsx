@@ -1,6 +1,5 @@
 import { ThemeProvider } from "styled-components";
-
-const theme = {};
+import theme from "~/ui/theme";
 
 export default function App({ Component, pageProps }) {
   return (
