@@ -1,8 +1,13 @@
 import { FC } from "react";
-import { Wrapper } from "./layout.styles";
+import { NavBar, Wrapper } from "./layout.styles";
 
 const Layout: FC = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+  return (
+    <Wrapper>
+      <NavBar>João Alberto</NavBar>
+      {children}
+    </Wrapper>
+  );
 };
 
 export { Layout };
