@@ -19,7 +19,8 @@
       "~/ui/*": ["./src/ui/*"],
       "~/hooks": ["./src/hooks"],
       "~/services": ["./src/services"],
-      "~/types": ["./src/types"]
+      "~/types": ["./src/types"],
+      "~/data": ["./src/data"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
