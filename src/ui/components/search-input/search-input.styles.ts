@@ -4,7 +4,7 @@ const Input = styled.input`
   border: none;
   margin: 0;
   outline: none;
-  pading: 0;
+  padding: 0;
   width: 100%;
 `;
 

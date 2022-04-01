@@ -1,9 +1,12 @@
+import { InputHTMLAttributes } from "react";
 import { Input, Wrapper } from "./search-input.styles";
 
-const SearchInput = () => {
+type SearchInputProps = InputHTMLAttributes<HTMLInputElement>;
+
+const SearchInput = (props: SearchInputProps) => {
   return (
     <Wrapper>
-      <Input type="search" />
+      <Input type="search" {...props} />
     </Wrapper>
   );
 };
