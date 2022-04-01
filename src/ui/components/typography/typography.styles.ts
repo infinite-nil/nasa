@@ -6,4 +6,10 @@ const Title = styled.h1`
   width: 100%;
 `;
 
-export { Title };
+const Error = styled.p`
+  font-size: 1.3rem;
+  color: ${({ theme }) => theme.colors.error};
+  width: 100%;
+`;
+
+export { Error, Title };

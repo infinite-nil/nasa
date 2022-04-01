@@ -5,6 +5,7 @@ const theme: DefaultTheme = {
     headings: "#77756f",
     text: "#1B1A17",
     primary: "#332FD0",
+    error: "#FF8080",
   },
 };
 

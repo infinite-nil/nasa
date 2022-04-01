@@ -7,8 +7,10 @@ export default function Home() {
   const router = useRouter();
   const { query, setQuery } = useSearch();
 
-  function navigateToSearchPage() {
-    router.push(`/search/${query}`);
+  function navigateToSearchPage(query: string) {
+    if (query) {
+      router.push(`/search/${query}`);
+    }
   }
 
   function handleSearchInputChange(event: FormEvent<HTMLInputElement>) {
@@ -20,8 +22,11 @@ export default function Home() {
       <Center direction="column" width="400px">
         <Title>Nasa search</Title>
         <Center width="100%">
-          <SearchInput onChange={handleSearchInputChange} />
-          <Button onClick={navigateToSearchPage} disabled={!query}>
+          <SearchInput
+            onChange={handleSearchInputChange}
+            onPressEnter={() => navigateToSearchPage(query)}
+          />
+          <Button onClick={() => navigateToSearchPage(query)} disabled={!query}>
             Search
           </Button>
         </Center>
