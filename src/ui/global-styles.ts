@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
+    color: ${({ theme }) => theme.colors.text};
     font-family: sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
