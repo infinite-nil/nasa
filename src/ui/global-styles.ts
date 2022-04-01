@@ -1,15 +1,34 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  *, *:before, *:after {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 
-  html, body {
-    color: ${({ theme }) => theme.colors.text};
+  * {
     margin: 0;
-    overflow: auto;
-    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  input {
+    font: inherit;
+  }
+
+  p, h1 {
+    overflow-wrap: break-word;
+  }
+
+  #__next {
+    isolation: isolate;
   }
 `;
 
